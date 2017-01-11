@@ -1,15 +1,15 @@
 console.log('<== STARTING MODULAR BOT ==>');
 
 // Loading Requirements
-const discord = require('discord.js') // Discord itself
-const settings = require('./settings.json') // Settings file
-const fs = require('fs') // Filesystem npm Package
-const bot = new discord.Client() // Creating a new bot instance
+const discord = require('discord.js')
+const settings = require('./settings.json')
+const fs = require('fs')
+const bot = new discord.Client()
 
 console.log('Setup √')
 
 bot.on('message', (message) => {
-	if (message.author.id === bot.user.id) return // Bot should not listen to himself
+	if (message.author.id === bot.user.id) return
 	if (message.content.startsWith('.eval') && message.author.id === '64438454750031872') {
 		try {
 			const com = eval(message.content.split(" ").slice(1).join(" "))
@@ -18,12 +18,12 @@ bot.on('message', (message) => {
 			message.channel.sendMessage('```\n' + e + '```')
 		}
 	}
-	if (!message.content.startsWith(settings.prefix)) return // Bot only executes command if the right prefix is used
-	const args = message.content.split(' '); // Splits message parts into arguments
-	const command = args.shift().slice(settings.prefix.length); // Deletes the prefix in the command variable
+	if (!message.content.startsWith(settings.prefix)) return
+	const args = message.content.split(' ');
+	const command = args.shift().slice(settings.prefix.length);
 	try {
-		let cmdFile = require('./commands/' + command); // requires all files in the commands folder
-		cmdFile.run(bot, message, args); // Runs the command
+		let cmdFile = require('./commands/' + command);
+		cmdFile.run(bot, message, args);
 	} catch (e) {
 		console.log(e + '\n');
 	}
@@ -41,7 +41,8 @@ bot.on('message', (message) => {
 console.log('Commands loaded √')
 
 bot.on('ready', () => {
-    console.log('<== MODULAR BOT ONLINE ==>')
+    console.log('<== ROBO DISC SPINNING! ==>')
+    bot.user.setGame('use .help')
 })
 
 bot.login(settings.bottoken)

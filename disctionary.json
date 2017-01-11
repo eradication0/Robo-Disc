@@ -1,0 +1,148 @@
+{
+  "filth" : {
+    "text" : "An outside curve. A 'Pure Filth' is one that goes from wall to wall without touching.",
+    "img" : "http://i.imgur.com/hKVlHVJ.png"
+  },
+  "Post" : {
+    "text" : "Diagonal throw to the corner without spin",
+    "img" : "http://i.imgur.com/wVUekHO.png"
+  },
+  "Hop" : {
+    "text" : "Any inside curve. The most extreme are referred to as 'Hard Hop'",
+    "img" : "http://i.imgur.com/NnV0rzA.png"
+  },
+  "Wallride" : {
+    "text" : "Bouncing the disc along the wall",
+    "img" : "http://i.imgur.com/ksLSIZ5.png"
+  },
+  "Short Hop" : {
+    "text" : "bouncing the disc off the wall you are standing next to.",
+    "img" : "http://i.imgur.com/ben5gXW.png"
+  },
+  "Skimmer" : {
+    "text" : "Shot that barely bounces off the wall.",
+    "img" : "http://i.imgur.com/bZjq4l4.png"
+  },
+  "Sawblade" : {
+    "text" : "Super shot to the wall.",
+    "img" : "http://i.imgur.com/6QwyYQy.png"
+  },
+  "Tire" : {
+    "text" : "The super lob throw because the hammering motion of the arm or becaues it looks like a tire"
+  },
+  "Soft Serve" : {
+    "text" : "ICECREAM!!! any serve less than blue on speed that is not a lob. Typically said in the same manner as 'toasty' from early Mortal Kombat games"
+  },
+  "Lobster Fest" : {
+    "text" : "When 2 players lob back in forth trying to keep the other from getting or haveing juice."
+  },
+  "Block Lobster" : {
+    "text" : "Blocking a disc only to let it drop to the ground because your lobster claws couldn't handle it"
+  },
+  "The Pull" : {
+    "text" : "First throw of a set. Fancy way of saying 'serve'"
+  },
+  "Knock Down Pass" : {
+    "text" : "2v2 exclusive. Catching a disc that hit teammate in the back."
+  },
+  "Ho Stack" : {
+    "text" : "Players playing the two sides instead of front back. Ho stands for horizontal",
+    "img" : "http://i.imgur.com/qD4INDv.png"
+  },
+  "Vert Stack" : {
+    "text" : "Players playing with one player in front and one player in back. Vert stands for vertical"
+  },
+  "Run through" : {
+    "text" : "The act of continually blocking or continually sliding shots solely for your teammate to get the throw. "
+  },
+  "Blocker" : {
+    "text" : "A player that plays at the net.",
+    "img" : "http://i.imgur.com/LWTuiLP.png"
+  },
+  "Handler" : {
+    "text" : "A player that plays at the goal line.",
+    "img" : "http://i.imgur.com/LWTuiLP.png"
+  },
+  "Dump" : {
+    "text" : "The act of passing the disc back. "
+  },
+  "Swing" : {
+    "text" : "The act of passing cross court. usually used to catch out of position players."
+  },
+  "Push" : {
+    "text" : "The act of passing the disc forward."
+  },
+  "Block Pass" : {
+    "text" : "Act of blocking the disc and your teammate picking it up. A perfect block pass will result in a super for the player catching it.",
+    "link" : "https://clips.twitch.tv/comptonemt/AnnoyingGnatBrokeBack"
+  },
+  "Advantage" : {
+    "text" : "Term for when one team is at a point where the next disc will win the game for them. "
+  },
+  "Jam Point" : {
+    "text" : "When both players/teams are at 44 or above and the next Disc will win the game."
+  },
+  "Pseudo" : {
+    "text" : "When both players/teams reach a rally that will cause either team to win the set based on its outcome"
+  },
+  "Super Jam Point" : {
+    "text" : "Jam point happening in set 3."
+  },
+  "Mega Jam Point" : {
+    "text" : "Jam point on set 3 of final game in a match."
+  },
+  "Hell" : {
+    "text" : "Any rally that extends past 20 points."
+  },
+  "Hell and a Half" : {
+    "text" : "Any rally that extends past 30 points."
+  },
+  "Double Hell" : {
+    "text" : "Any rally that extends past 40 points."
+  },
+  "Full Destruction" : {
+    "text" : "Any rally that extends past 50 points."
+  },
+  "Jam" : {
+    "text" : "A 50-0 set."
+  },
+  "Full jam" : {
+    "text" : "Jamming someone the first two sets in a row. Psuedo Full is just two sets in a row without being the first 2 in a game."
+  },
+  "Point Cap" : {
+    "text" : "The amout of points at which a set is over. (50 in standard play)"
+  },
+  "Reading" : {
+    "text" : "How a player sees the initial angle and spin on the disc."
+  },
+  "Trapping" : {
+    "text" : "Meeting the disc near a wall to get a block or catch."
+  },
+  "Stuff Super" : {
+    "text" : "The act of standing slightly off the net and throwing into a stuff block as to get a super off the deflection."
+  },
+  "Serving circle" : {
+    "text" : "The blue/red circle you serve from."
+  },
+  "Center-dotting" : {
+    "text" : "The act of continually throwing the disc to your opponents serving circle. Mainly used to help train new players."
+  },
+  "Reset" : {
+    "text" : "The act of throwing a lob to the back line after sliding allowing you more time to reset."
+  },
+  "Slide Through" : {
+    "text" : "The act of sliding through a disc in order to gain a position closer to the net."
+  },
+  "Step-In" : {
+    "text" : "The act of standing out of the Lob target til the disc is catchable and then steping in while pressing A for the perfect."
+  },
+  "#ExcuseJam" : {
+    "text" : "When someone makes an excuse for losing a rally, set, or game. (NoJohns)"
+  },
+  "Booped" : {
+    "text" : "The act of getting hit in the back with the disc that causes your player to fall down."
+  },
+  "JamFam" : {
+    "text" : "Name for players in the Disc Jam Community."
+  }
+}
