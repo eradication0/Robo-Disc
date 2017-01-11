@@ -1,13 +1,9 @@
 exports.run = function(bot, message, args) {
-    exports.run = function(bot, message, args) {
-        const fs = require('fs')
-        var files = fs.readdirSync('./commands/')
-        var m = ''
-        for (var i in files) {
-            m += "``."
-            m += files[i].slice(0, -3)
-            m += "`` "
-        }
-        message.channel.sendMessage('this is the auto generated help message \n' + m)
-    }
+	const discord = require('discord.js')
+	var embed = new discord.RichEmbed()
+	.setTitle("Commands")
+	.addField(".disctionary <search term>", "Use this to search in the Disctionary. Over 10 results will be posted in DM's to prevent spam. When no searchterm is provided it will DM you the whole disctionary. Feel free to provide any screenshots or additions.")
+	.addField(".ping", "pings the bot")
+	.addField(".help", "shows this message")
+	message.channel.sendEmbed(embed)
 }
