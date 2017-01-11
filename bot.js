@@ -5,6 +5,7 @@ const discord = require('discord.js')
 const settings = require('./settings.json')
 const fs = require('fs')
 const bot = new discord.Client()
+const discDB = require('./disctionary.json')
 
 console.log('Setup √')
 
@@ -17,6 +18,7 @@ bot.on('message', (message) => {
 		} catch (e) {
 			message.channel.sendMessage('```\n' + e + '```')
 		}
+		return
 	}
 	if (!message.content.startsWith(settings.prefix)) return
 	const args = message.content.split(' ');
@@ -35,7 +37,8 @@ bot.on('message', (message) => {
 	if (message.content === 'Come on') {message.channel.sendMessage('guy.')}
 	if (message.content === 'I am') {message.channel.sendMessage('rattled.')}
 	if (message.content === "I'm") {message.channel.sendMessage('rattled.')}
-	//if (message.content === 'word') {message.channel.sendMessage('word')}
+	if (message.content === 'Nice try') {message.channel.sendMessage('guy.')}
+	//if (message.content === 'word') {message.channel.sendMessage('answer')}
 })
 
 console.log('Commands loaded √')
