@@ -31,7 +31,7 @@ bot.on('message', (message) => {
 	}
 })
 
-//mems
+//memes
 bot.on('message', (message) => {
 	if (message.author.id === bot.user.id) return
 	if (message.content === 'Come on') {message.channel.sendMessage('guy.')}
@@ -39,6 +39,7 @@ bot.on('message', (message) => {
 	if (message.content === "I'm") {message.channel.sendMessage('rattled.')}
 	if (message.content === 'Nice try') {message.channel.sendMessage('guy.')}
 	if (message.content === 'Jake') {message.channel.sendMessage('Is our lovely dog! <3')}
+	if (message.content === 'Im') {message.channel.sendMessage('rattled!')}
 	//if (message.content === 'word') {message.channel.sendMessage('answer')}
 })
 

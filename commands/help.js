@@ -6,5 +6,6 @@ exports.run = function(bot, message, args) {
 	.addField(".top10", "Shows the global top players list and the amount of points they have, including the link to the spreadsheet")
 	.addField(".ping", "pings the bot")
 	.addField(".help", "shows this message")
+	
 	message.channel.sendEmbed(embed)
 }

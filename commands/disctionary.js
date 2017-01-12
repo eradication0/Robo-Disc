@@ -57,20 +57,20 @@ exports.run = function(bot, message, args) {
             embed.addField(":link:", discDB[searchResults[0]].link)
         }
         message.channel.sendEmbed(embed)
-        // LEGTH 1 DONE
+            // OVER 10 SEARCH RESULTS
     } else if (searchResults.length < 10) {
-		embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle(searchResults[0]).setURL('http://discord.gg/discjam').setDescription(discDB[searchResults[0]].text)
-		if (typeof discDB[searchResults[0]].img !== "undefined") {
-			embed.setImage(discDB[searchResults[0]].img)
-		} else if (typeof discDB[searchResults[0]].link !== "undefined") {
-			embed.addField(":link:", discDB[searchResults[0]].link)
-		}
-		message.channel.sendEmbed(embed)
+        embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle(searchResults[0]).setURL('http://discord.gg/discjam').setDescription(discDB[searchResults[0]].text)
+        if (typeof discDB[searchResults[0]].img !== "undefined") {
+            embed.setImage(discDB[searchResults[0]].img)
+        } else if (typeof discDB[searchResults[0]].link !== "undefined") {
+            embed.addField(":link:", discDB[searchResults[0]].link)
+        }
+        message.channel.sendEmbed(embed)
         embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
         for (var i = 0; i < searchResults.length; i++) {
-            if (typeof discDB[searchResults[0]].img !== "undefined") {
+            if (typeof discDB[searchResults[i]].img !== "undefined") {
                 embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
-            } else if (typeof discDB[searchResults[0]].img !== "undefined") {
+            } else if (typeof discDB[searchResults[i]].img !== "undefined") {
                 embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
             } else {
                 embed.addField(searchResults[i], discDB[searchResults[i]].text)
@@ -79,63 +79,63 @@ exports.run = function(bot, message, args) {
         message.channel.sendEmbed(embed)
 
 
-
+        // OVER 10 MESSAGES
     } else if (searchResults.length > 10) {
+        // MESSAGE COMING FROM SERVER
         if (!message.member) {
-			embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle(searchResults[0]).setURL('http://discord.gg/discjam').setDescription(discDB[searchResults[0]].text)
-			if (typeof discDB[searchResults[0]].img !== "undefined") {
-				embed.setImage(discDB[searchResults[0]].img)
-			} else if (typeof discDB[searchResults[0]].link !== "undefined") {
-				embed.addField(":link:", discDB[searchResults[0]].link)
-			}
-			message.channel.sendEmbed(embed)
-			embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
-	        for (var i = 0; i < searchResults.length; i++) {
-				if (embed.fields.length === 10) {
-	                    message.channel.sendEmbed(embed)
-	                    embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
-	            }
-	            if (typeof discDB[searchResults[0]].img !== "undefined") {
-	                embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
-	            } else if (typeof discDB[searchResults[0]].img !== "undefined") {
-	                embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
-	            } else {
-	                embed.addField(searchResults[i], discDB[searchResults[i]].text)
-	            }
-	        }
-	        message.channel.sendEmbed(embed)
+            // PREVIEW POSTS
+            embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle(searchResults[0]).setURL('http://discord.gg/discjam').setDescription(discDB[searchResults[0]].text)
+            if (typeof discDB[searchResults[0]].img !== "undefined") {
+                embed.setImage(discDB[searchResults[0]].img)
+            } else if (typeof discDB[searchResults[0]].link !== "undefined") {
+                embed.addField(":link:", discDB[searchResults[0]].link)
+            }
+            message.channel.sendEmbed(embed)
+                // SEARCH POSTS
+            embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
+            for (var i = 0; i < searchResults.length; i++) {
+                if (embed.fields.length === 10) {
+                    message.channel.sendEmbed(embed)
+                    embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
+                }
+                if (typeof discDB[searchResults[i]].img !== "undefined") {
+                    embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
+                } else if (typeof discDB[searchResults[i]].img !== "undefined") {
+                    embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
+                } else {
+                    embed.addField(searchResults[i], discDB[searchResults[i]].text)
+                }
+            }
+            message.channel.sendEmbed(embed)
+        // MESSAGE COMING FROM DM
         } else {
-			embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle(searchResults[0]).setURL('http://discord.gg/discjam').setDescription(discDB[searchResults[0]].text)
-			if (typeof discDB[searchResults[0]].img !== "undefined") {
-				embed.setImage(discDB[searchResults[0]].img)
-			} else if (typeof discDB[searchResults[0]].link !== "undefined") {
-				embed.addField(":link:", discDB[searchResults[0]].link)
-			}
-			message.member.sendEmbed(embed)
-			embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
-			for (var i = 0; i < searchResults.length; i++) {
-				if (embed.fields.length === 10) {
-						message.member.sendEmbed(embed)
-						embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
-				}
-				if (typeof discDB[searchResults[0]].img !== "undefined") {
-					embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
-				} else if (typeof discDB[searchResults[0]].img !== "undefined") {
-					embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
-				} else {
-					embed.addField(searchResults[i], discDB[searchResults[i]].text)
-				}
-			}
-			message.member.sendEmbed(embed)
-
-
-
-
-
-
+          // PREVIEW POST
+            embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle(searchResults[0]).setURL('http://discord.gg/discjam').setDescription(discDB[searchResults[0]].text)
+            if (typeof discDB[searchResults[0]].img !== "undefined") {
+                embed.setImage(discDB[searchResults[0]].img)
+            } else if (typeof discDB[searchResults[0]].link !== "undefined") {
+                embed.addField(":link:", discDB[searchResults[0]].link)
+            }
+            message.member.sendEmbed(embed)
+            // SEARCH POSTS
+            embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
+            for (var i = 0; i < searchResults.length; i++) {
+                if (embed.fields.length === 10) {
+                    message.member.sendEmbed(embed)
+                    embed = new discord.RichEmbed().setColor(randHex()).setAuthor("RoboDisc", "https://cdn.discordapp.com/attachments/220845173150711808/268740555213635584/4ec94a0d2c43c6a603170d4d2c5e0376.jpg").setTitle('Here are your ' + searchResults.length + ' search results').setURL('http://discord.gg/discjam')
+                }
+                if (typeof discDB[searchResults[i]].img !== "undefined") {
+                    embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
+                } else if (typeof discDB[searchResults[i]].img !== "undefined") {
+                    embed.addField(searchResults[i], discDB[searchResults[i]].text + ' ' + discDB[searchResults[i]].img)
+                } else {
+                    embed.addField(searchResults[i], discDB[searchResults[i]].text)
+                }
+            }
+            message.member.sendEmbed(embed)
         }
 
-    } else {
+    } else if (searchResults.length === 0) {
         message.channel.sendMessage("Nothing found, please try again.")
     }
 }
