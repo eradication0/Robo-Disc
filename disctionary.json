@@ -49,6 +49,10 @@
     "text" : "Players playing the two sides instead of front back. Ho stands for horizontal",
     "img" : "http://i.imgur.com/qD4INDv.png"
   },
+  "HST (Ho-Stack Triangle)" : {
+    "text" : "This is a hybrid of Ho-Stack and Vert-Stack positioning types that moves in a triangular fashion. It runs on the idea of Sealing the edge and setting the angle much like in 2v2 volleyball. \n \n **-**These are the locations to properly plant yourself when trying to execute the HST.\n **-** When the disc is in the green area players should be on the green Xs.\n **-** When the disc is in the yellow area players should be on the yellow Xs.\n **-** When there is a super throw players should be on the orange Xs.",
+    "img" : "http://i.imgur.com/62kp9jn.png"
+  },
   "Vert Stack" : {
     "text" : "Players playing with one player in front and one player in back. Vert stands for vertical"
   },

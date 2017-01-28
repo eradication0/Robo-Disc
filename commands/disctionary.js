@@ -5,7 +5,7 @@ exports.run = function(bot, message, args) {
     const discDB = require('../disctionary.json')
     const find = require("array-find")
     var embed = new discord.RichEmbed()
-    var discSearch = args.join().replace(',', ' ')
+    var discSearch = args.join().replace(/,/g, ' ')
     var discAry = []
     var searchResults = []
 

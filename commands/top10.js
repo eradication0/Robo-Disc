@@ -9,7 +9,8 @@ exports.run = function(bot, message, args) {
 	.setURL('https://goo.gl/99oQsm')
 	.setDescription("Click the Blue title for the full spreadsheet")
 	for (var I in top10) {
-		if (embed.fields === 10) {
+		console.log(embed.fields.length)
+		if (embed.fields.length === 9) {
 			message.channel.sendEmbed(embed)
 			return
 		} else {

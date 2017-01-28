@@ -7,6 +7,7 @@ const fs = require('fs')
 const bot = new discord.Client()
 const discDB = require('./disctionary.json')
 
+
 console.log('Setup √')
 
 bot.on('message', (message) => {
@@ -38,9 +39,7 @@ bot.on('message', (message) => {
 	if (message.content === 'I am') {message.channel.sendMessage('rattled.')}
 	if (message.content === "I'm") {message.channel.sendMessage('rattled.')}
 	if (message.content === 'Nice try') {message.channel.sendMessage('guy.')}
-	if (message.content === 'Jake') {message.channel.sendMessage('Is our lovely dog! <3')}
 	if (message.content === 'Im') {message.channel.sendMessage('rattled!')}
-	//if (message.content === 'word') {message.channel.sendMessage('answer')}
 })
 
 console.log('Commands loaded √')
