@@ -10,13 +10,19 @@ exports.run = function(bot, message, args) {
     } else if (args[0] === "EU") {
         message.member.addRole("271996314265321472")
         message.channel.sendMessage("Region set to EU")
-    } else if (args[0] === "OCE") {
+    } else if (args[0] === "OC") {
         message.member.addRole("271996418237923339")
-        message.channel.sendMessage("Region set to OCE")
-    } else if (args[0] === "SAM") {
+        message.channel.sendMessage("Region set to OC")
+    } else if (args[0] === "SA") {
         message.member.addRole("273454098034982912")
-        message.channel.sendMessage("Region set to SAM")
+        message.channel.sendMessage("Region set to SA")
+    }  else if (args[0] === "AS") {
+        message.member.addRole("274901595618279426")
+        message.channel.sendMessage("Region set to AS")
+    }  else if (args[0] === "AF") {
+        message.member.addRole("274902045230759936")
+        message.channel.sendMessage("Region set to AF")
     } else {
-        message.channel.sendMessage("Could not find that region be sure to write NA, EU, OCE or SAM")
+        message.channel.sendMessage("Could not find that region be sure to write NA, EU, OC, SA, AS or AF")
     }
 }
