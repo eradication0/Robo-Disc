@@ -7,6 +7,8 @@ const fs = require('fs')
 const bot = new discord.Client()
 const discDB = require('./disctionary.json')
 
+var kofth = ["stop"]
+const challenger = 2
 
 console.log('Setup √')
 
@@ -25,6 +27,9 @@ bot.on('message', (message) => {
 	const args = message.content.split(' ');
 	const command = args.shift().slice(settings.prefix.length);
 	try {
+		const discord = require('./commands/koth.js')
+		exports.callenger = challenger
+		exports.kofth = kofth
 		let cmdFile = require('./commands/' + command);
 		cmdFile.run(bot, message, args);
 	} catch (e) {
