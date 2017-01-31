@@ -14,15 +14,18 @@ console.log('Setup √')
 
 bot.on('message', (message) => {
 	if (message.author.id === bot.user.id) return
-	if (message.content.startsWith('.eval') && message.author.id === '64438454750031872') {
-		try {
-			const com = eval(message.content.split(" ").slice(1).join(" "))
-			message.channel.sendMessage('```\n' + com + '```')
-		} catch (e) {
-			message.channel.sendMessage('```\n' + e + '```')
-		}
-		return
-	}
+	if (message.content.startsWith(settings.prefix + 'eval') && message.author.id === '64438454750031872') {
+        const embed = new discord.RichEmbed()
+        try {
+            const com = eval(message.content.split(" ").slice(1).join(" "))
+            embed.setTitle(com)
+            message.channel.sendEmbed(embed)
+        } catch (e) {
+            embed.setTitle(e)
+            message.channel.sendEmbed(embed)
+        }
+        return
+    }
 	if (!message.content.startsWith(settings.prefix)) return
 	const args = message.content.split(' ');
 	const command = args.shift().slice(settings.prefix.length);
