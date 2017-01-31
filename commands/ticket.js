@@ -6,7 +6,8 @@ exports.run = function(bot, message, args) {
 	}
 	const discord = require('discord.js')
 	var embed = new discord.RichEmbed()
-	.setColor("#9f0000").setFooter('Bot by Zer0#3302', 'https://cdn.discordapp.com/attachments/134436989175988224/271616333928464395/avatar7.png')
+	.setColor("#9f0000")
+	.setFooter(message.author.username, message.author.avatarURL)
 	.setURL('https://discord.me/DiscJamDojo')
 	.setTitle(newArgs[0].replace('.ticket ',''))
 	.addField('User', newArgs[1])
